@@ -50,7 +50,7 @@ function App() {
 
       <button onClick={()=>{triggerNotification({
         type:'warning',
-        message:'Warning please dont refresh',
+        message:'Warning please do not refresh',
         duration:3000
       })}}>Click here for warning toast</button> &nbsp;
 
