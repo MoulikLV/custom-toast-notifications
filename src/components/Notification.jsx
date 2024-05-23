@@ -11,12 +11,17 @@ const icons={
 }
 
 
-const Notification = ({type="",message,onClose=()=>{}}) => {
+const Notification = ({type="",message,setNotification}) => {
+
+  const onClose=()=>{
+       setNotification(null)
+  }
+
   return (
     <div className={`notification ${type}`}>
       {icons[type]}
       {message}
-      {<AiOutlineClose color='white' className='closeBtn' onClick={()=>onClose()}/>}
+      {<AiOutlineClose color='white' className='closeBtn' onClick={onClose}/>}
     </div>
   )
 }

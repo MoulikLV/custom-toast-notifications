@@ -14,9 +14,11 @@ const useNotification = (initialPosition='top-right') => {
 
         const defaultDuration = notificationProps.duration || 3000
         timer=setTimeout(() => {
-            setNotification(null)
+            setNotification(null) 
         }, defaultDuration);
     },[]);
+
+   
 
     const changePosition=(newPosition)=>{
           setPosition(newPosition)
@@ -24,7 +26,7 @@ const useNotification = (initialPosition='top-right') => {
 
     const notificationComponent= notification? (
         <div className={position}>
-            <Notification {...notification}/>
+            <Notification {...notification} setNotification={setNotification}/>
         </div>
 
     ) : null;
