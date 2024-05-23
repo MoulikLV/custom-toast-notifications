@@ -17,7 +17,7 @@ function App() {
 
    <div>
 
-    <h2>React Toast</h2>
+    <h2>Toast Notifications</h2>
       
    <div>
     Select Position : &nbsp;&nbsp; 
